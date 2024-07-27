@@ -1,1 +1,51 @@
-
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Time Tracker</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <p class="mainFont">Time Tracker</p>
+        <div class="logo imgBlock">
+              <img src="" alt="logo">
+        </div>
+      </div>
+      <div class="mostUsedContainer bgHolder"></div>
+      <div class="mainContainer">
+        <div class="inputContainer ">
+          <input type="text" id="taskInput" placeholder="Add url to start " />
+          <button id="taskButton">Start</button>
+        </div>
+        <div class="taskList bgHolder">
+          <div class="taskListHeader table">
+            <p class="taskName">Task</p>
+            <p class="taskTime">Duration</p>
+            <button class="deleteButton">Delete</button>
+          </div>
+          <ul id="taskList ">
+            <li class="task table">
+              <div class="taskContent">
+                <div class="imgBlock">
+                <img
+                  src=""
+                  alt=""
+                  class="taskImage"
+                />
+                </div>
+                <p class="taskTitle">name</p>
+              </div>
+              <p class="taskTime">00:00:00</p>
+              <button class="deleteButton">Delete</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
