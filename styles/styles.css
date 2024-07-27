@@ -11,6 +11,7 @@
   --bgColor: #F4F4F4;
   --whiteBg: #fff;
   --grayishBorder: #E5E5E5;
+  --lightText:#595959;
 
   --mainFont:1.5rem;
   --paraFont: 1rem;
@@ -85,16 +86,22 @@
   border: 1px solid var(--grayishBorder);
   border-radius: 0.5rem;
 }
-.taskListHeader{
-  padding: 0.85rem;
+.mainContainer{
+  margin-top: 1rem;
 }
 .taskList {
-  padding: 1rem;
+  margin: 1rem 0;
+  padding: 0.5rem ;
   overflow-y: auto;
+}
+
+.taskListHeader{
+  padding: 0.85rem;
+  color: var(--lightText);
 }
 .table {
   display: grid;
-  grid-template-columns: repeat(2, 1fr) 50px;
+  grid-template-columns: repeat(2, 1fr) 30px;
 }
 .taskContent {
   display: flex;
@@ -108,9 +115,23 @@
   border-bottom: 1px solid var(--grayishBorder);
 }
 .deleteButton {
-  background: var(--danger);
-  color: var(--whiteBg);
   border: none;
+  color: var(--lightText);
+  background: none;
   cursor: pointer;
+  height: var(--size);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.bi {
+  content: '';
+  display: block;
+  color: var(--danger);
+  fill: var(--danger);
+  width: 100%;
+  height: 100%;
+  font-size:1.25rem;
+}
