@@ -2,5 +2,11 @@
   "manifest_version": 3,
   "name": "Time Tracker",
   "version": "1.0.0",
-  "description": "Extension to track time spent on websites"
+  "description": "Extension to track time spent on websites",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs", "storage"
+  ]
 }
