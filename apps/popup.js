@@ -1,3 +1,4 @@
+
 //website origin
 const origin = window.location.origin;
 const websiteTitleLocation = window.location.href;
@@ -13,9 +14,6 @@ const taskListsArray = [];
 const taskInput = document.querySelector("#taskInput");
 const taskBtn = document.querySelector("#taskButton");
 const taskLists = document.querySelector(".taskListsUl");
-
-
-
 
 //get favicon
 const getFavIcon = () => {
@@ -38,7 +36,7 @@ taskInput.setAttribute("placeholder", origin);
 if (taskInput.value == "") {
   taskInput.value = origin;
 }
-function createTaskLi( logo, title, websiteLink, taskDuration){
+function createTaskLi(logo, title, websiteLink, taskDuration) {
   //li
   const taskElement = document.createElement("li");
   taskElement.setAttribute("class", "task table");
@@ -81,36 +79,36 @@ function createTaskLi( logo, title, websiteLink, taskDuration){
 }
 const addToList = () => {
   let logo = getFavIcon();
-  if(logo == "none"){
-    logo = "https://www.gstatic.com/devrel-devsite/prod/vd906e53f099e628a2c079fcd932eaf4d8ec6809dab19b3d79a915c60d6afdd75/chrome/images/favicon.png";
-  }else{
-  logo = getFavIcon();
+  if (logo == "none") {
+    logo =
+      "https://www.gstatic.com/devrel-devsite/prod/vd906e53f099e628a2c079fcd932eaf4d8ec6809dab19b3d79a915c60d6afdd75/chrome/images/favicon.png";
+  } else {
+    logo = getFavIcon();
   }
 
   const eachTask = {
     title: document.title,
     logo: logo,
-    websiteLink: websiteTitleLocation
-  }
-  taskListsArray.push(eachTask)
+    websiteLink: websiteTitleLocation,
+  };
+  taskListsArray.push(eachTask);
 
-  createTaskLi( eachTask.logo, eachTask.title,eachTask.websiteLink )
+  createTaskLi(eachTask.logo, eachTask.title, eachTask.websiteLink);
 };
 
 const addTask = () => {
-  addToList()
+  addToList();
 };
 taskBtn.addEventListener("click", addTask);
 
-function deleteTaskLi(e){
-  console.log(e)
-  if(e.target.className.includes('deleteIcon')){
-  const ele = e.target.parentElement.parentElement
-    ele.remove()
+function deleteTaskLi(e) {
+  console.log(e);
+  if (e.target.className.includes("deleteIcon")) {
+    const ele = e.target.parentElement.parentElement;
+    ele.remove();
   }
-  
 }
 
 const deleteBtn = document.querySelector(".deleteIcon");
-console.log(deleteBtn)
-document.addEventListener("click", deleteTaskLi)
+console.log(deleteBtn);
+document.addEventListener("click", deleteTaskLi);

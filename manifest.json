@@ -3,10 +3,17 @@
   "name": "Time Tracker",
   "version": "1.0.0",
   "description": "Extension to track time spent on websites",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "js": ["./apps/content-script.js"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ],
   "action": {
     "default_popup": "popup.html"
   },
-  "permissions": [
-    "tabs", "storage"
-  ]
+  "permissions": ["tabs", "storage"]
 }
