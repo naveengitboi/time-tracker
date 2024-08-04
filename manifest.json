@@ -8,12 +8,13 @@
   },
   "content_scripts": [
     {
-      "js": ["./apps/content-script.js"],
-      "matches": ["http://*/*", "https://*/*"]
+      "js": ["content-scripts.js"],
+      "matches": ["<all_urls>"]
     }
   ],
   "action": {
     "default_popup": "popup.html"
   },
-  "permissions": ["tabs", "storage"]
+  "permissions": ["tabs", "storage", "activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"]
 }
