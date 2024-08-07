@@ -10,6 +10,10 @@
     {
       "js": ["content-scripts.js"],
       "matches": ["<all_urls>"]
+    },
+    {
+      "js": ["leetcode-scripts.js"],
+      "matches": ["<all_urls>"]
     }
   ],
   "action": {
